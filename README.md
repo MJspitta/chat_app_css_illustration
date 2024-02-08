@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Chat App Solution](https://www.frontendmentor.io/solutions/chat-app-css-illustration-f8JLYz1Ro9)
+- Live Site URL: [Chat App Live Site](https://mjspitta.github.io/chat_app_css_illustration/)
 
 ## My process
 

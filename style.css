@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(270, 20%, 96%);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left-bg {
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    background: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    z-index: -1;
+    left: -2rem;
+    top: -4rem;
+    border-radius: 0 0 300px 300px;
+}
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.phone {
+    width: 40%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.7rem;
+    border-radius: 25px;
+    position: relative;
+    right: -8rem;
+    animation: appear 1.5s ease-in forwards;
+}
+
+.phone-top-bg {
+    background-color: hsl(0, 0%, 100%);
+    width: 62%;
+    height: 1rem;
+    position: absolute;
+    left: 19%;
+    border-radius: 0 0 12px 12px;
+}
+
+.phone-screen {
+    width: 100%;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 20px;
+}
+
+.profile-section {
+    background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem 0.7rem;
+    width: 100%;
+    border-radius: 20px 20px 5px 5px;
+}
+.profile-section img {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+.profile-section .user {
+    width: 60%;
+}
+.profile-section .user h2 {
+    font-size: 14px;
+    font-weight: 500;
+}
+.profile-section .user p {
+    font-size: 10px;
+    color: hsl(276, 100%, 81%);
+}
+
+@keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+@keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.chat-section {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0.7rem;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.chat-section div {
+    margin-bottom: 0.5rem;
+}
+
+.left-chat {
+    background-color: hsl(270, 20%, 93%);
+    color: hsl(276, 55%, 52%);
+    padding: 0.4rem;
+    border-radius: 10px 10px 10px 5px;
+    width: 65%;
+    animation: slideRight 1.5s ease-in-out forwards;
+}
+.right-chat {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(271, 15%, 43%);
+    padding: 0.4rem;
+    border-radius: 10px 10px 5px 10px;
+    width: 70%;
+    align-self: flex-end;
+    animation: slideLeft 1.5s ease-in-out forwards;
+}
+.right-chat-img {
+    height: 2rem;
+    align-self: flex-end;
+    animation: slideLeft 1.5s ease-in-out forwards;
+}
+.right-chat-img img {
+    height: 100%;
+    border-radius: 10px;
+}
+.marg-left {
+    margin-left: 0.5rem;
+}
+.radio-select {
+    padding: 0.5rem;
+    background: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 10px 10px 10px 5px;
+    width: 75%;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.radio-select span:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+}
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+.price {
+    font-size: 14px;
+    font-weight: 700;
+}
+.text-box {
+    width: 100%;
+    height: 2.5rem;
+    position: relative;
+}
+.text-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+}
+::placeholder {
+    color: hsl(206, 6%, 79%);
+}
+.send {
+    background-color: hsl(271, 36%, 24%);
+    display: inline-block;
+    padding: 0.6rem;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    right: 8px;
+}
+.send:hover, .send button:hover {
+    cursor: pointer;
+}
+.send button {
+    border: none;
+    background: none;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.right-side h1 {
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+    font-size: 40px;
+    margin-bottom: 1.6rem;
+}
+.right-side p {
+    font-weight: 400;
+    color: hsl(270, 7%, 64%);
+    width: 65%;
+    line-height: 1.6;
+}
+
+.right-bg {
+    background-color: hsl(270, 20%, 94%);
+    width: 45%;
+    height: 90vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 250px 10px 0 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .left-bg {
+        width: 100%;
+        height: 80%;
+        left: -50%;
+        top: 0;
+    }
+
+    .phone {
+        margin-top: 4rem;
+        width: 70%;
+        right: 0;
+    }
+
+    .profile-section img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .profile-section .user h2 {
+        font-size: 11px;
+    }
+    .profile-section .user p {
+        font-size: 8px;
+    }
+
+    .chat-section {
+        font-size: 8px;
+    }
+
+    .price {
+        font-size: 11px;
+    }
+
+    .text-box {
+        height: 2rem;
+    }
+    .text-box input {
+        padding-left: 1rem;
+    }
+    ::placeholder {
+        font-size: 10px;
+    }
+    .send {
+        padding: 0.4rem;
+    }
+    i {
+        font-size: 8px;
+    }
+
+    .right-side {
+        width: 100%;
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+    .right-side p {
+        width: 85%;
+        margin: auto;
+    }
+    .right-bg
+    {
+        width: 100%;
+        height: 60vh;
+        right: -50%;
+        border-radius: 300px 300px 0 0;
+    }
+}
